@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+
+  <div id="calculator" aria-label="Calculator">
+    <input type="text" id="input" aria-label="Calculator display" readonly>
+    <div id="keys" role="grid">
+      <button onclick="getDisplayed('+')" class="coloring" aria-label="Add">+</button>
+      <button onclick="getDisplayed('9')" aria-label="Nine">9</button>
+      <button onclick="getDisplayed('8')" aria-label="Eight">8</button>
+      <button onclick="getDisplayed('7')" aria-label="Seven">7</button>
+      <button onclick="getDisplayed('-')" class="coloring" aria-label="Subtract">-</button>
+      <button onclick="getDisplayed('6')" aria-label="Six">6</button>
+      <button onclick="getDisplayed('5')" aria-label="Five">5</button>
+      <button onclick="getDisplayed('4')" aria-label="Four">4</button>
+      <button onclick="getDisplayed('*')" class="coloring" aria-label="Multiply">*</button>
+      <button onclick="getDisplayed('3')" aria-label="Three">3</button>
+      <button onclick="getDisplayed('2')" aria-label="Two">2</button>
+      <button onclick="getDisplayed('1')" aria-label="One">1</button>
+      <button onclick="getDisplayed('/')" class="coloring" aria-label="Divide">/</button>
+      <button onclick="getDisplayed('0')" aria-label="Zero">0</button>
+      <button onclick="getDisplayed('.')" aria-label="Decimal point">.</button>
+      <button onclick="calculate()" aria-label="Equals">=</button>
+      
+      <!-- Backspace Button -->
+      <button onclick="backspace()" class="backspace-button" aria-label="Backspace">←</button>
+      
+      <button onclick="getCleared()" class="coloring" aria-label="Clear">C</button>
+    </div>
+  </div>
+
+  <script src="{% static 'index.js' %}"></script>
+</body>
+</html>

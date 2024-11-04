@@ -1,0 +1,104 @@
+/* Main calculator container */
+#calculator {
+    width: 100%;
+    max-width: 400px; /* Limits the calculator width on larger screens */
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+/* Calculator display input */
+#input {
+    width: 100%;
+    height: 60px;
+    text-align: right;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Calculator keys container */
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+    gap: 10px;
+}
+
+/* Buttons styling */
+button {
+    height: 60px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.coloring {
+    background-color: #f0ad4e;
+    color: #fff;
+}
+
+.coloring:hover {
+    background-color: #ec971f;
+}
+
+.backspace-button {
+    background-color: #5bc0de;
+    color: #fff;
+}
+
+.backspace-button:hover {
+    background-color: #31b0d5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #calculator {
+        padding: 15px;
+    }
+
+    #input {
+        height: 50px;
+        font-size: 1.2em;
+    }
+
+    #keys {
+        gap: 8px;
+    }
+
+    button {
+        height: 50px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #calculator {
+        padding: 10px;
+    }
+
+    #input {
+        height: 40px;
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    #keys {
+        grid-template-columns: repeat(4, 1fr); /* Maintain 4 columns */
+        gap: 5px;
+    }
+
+    button {
+        height: 40px;
+        font-size: 0.9em;
+    }
+}
